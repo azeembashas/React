@@ -7,6 +7,24 @@
   pointer-events: none;
 }
 
+.float-container {
+  border: 3px solid #fff;
+  padding: 0px;
+  width: 100%;
+  left: 0;
+  top:0;
+}
+.table { 
+  width: 100%; 
+}
+.float-child {
+  position: absolute;
+  right:0;
+  top:0;
+  padding: 0px;
+  border: 2px solid red;
+} 
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;

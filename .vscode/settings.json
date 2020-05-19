@@ -1,0 +1,12 @@
+{
+    "timeline.excludeSources": null,
+    "search.exclude": {
+        "InputSwitchTest": true
+    },
+    "files.watcherExclude": {
+        "InputSwtichTest": true
+    },
+    "files.exclude": {
+        "*Test/.js": true
+    }
+}

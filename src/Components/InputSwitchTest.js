@@ -6,6 +6,7 @@ import 'primeicons/primeicons.css';
 import { FixedSizeList as List } from "react-window";
 import { HydMap } from './HydMap';
 import { AtrMap } from './AtrMap';
+import MapInputSwitch from './MapInputSwitch';
 //import HydMap from './HydMap';
 
 export class InputSwitchTest extends Component {
@@ -41,10 +42,16 @@ export class InputSwitchTest extends Component {
             })
         }
     }
-
+    
     render() {
+        const switchStyles = {
+            position : 'Absolute',
+            top: 0,
+            right:0,
+            padding:100
+          };
         const Map = () =>(
-            <div className="content-section introduction" style={this.props.style}>
+            <div className="content-section introduction">
                     <h3>Hyderabad</h3>
                     <InputSwitch checked={this.state.checked1} tooltip="Hyderabad" onChange={()=>this.hydSwitchHandler()} /> 
 
@@ -56,13 +63,13 @@ export class InputSwitchTest extends Component {
             <div>
                 {this.state.checked1?<HydMap/>:null}
                 {this.state.checked2?<AtrMap/>:null}
-         
             <List
                 className="List"
                 height={100}
                 itemCount={1}
                 itemSize={50}
                 width={800}
+                align={'smart'}
                 
   >
     {Map}
